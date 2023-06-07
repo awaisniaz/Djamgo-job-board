@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'user',
+    'adminuser'
 ]
 
 MIDDLEWARE = [
@@ -49,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Jobboard_Be_Django.urls'
+ROOT_URLCONF = 'Education-Management-System.urls'
 
 TEMPLATES = [
     {
@@ -67,19 +69,22 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Jobboard_Be_Django.wsgi.application'
+WSGI_APPLICATION = 'Education-Management-System.wsgi.application'
 
+AUTH_USER_MODEL = 'adminuser.User'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'Education-Management-System',
+        'CLIENT': {
+            'host': 'mongodb://localhost:27017'  # or 'MONGODB-CR' if using an older MongoDB version
+        }
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
