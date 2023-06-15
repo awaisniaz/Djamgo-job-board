@@ -6,7 +6,7 @@ from django.contrib.auth.models import (
 
 
 class UserManager(BaseUserManager):
-    def create_user(self, email, password=None):
+    def create_user(self, email,first_name,last_name,type,username, password=None,):
         """
         Creates and saves a User with the given email and password.
         """
@@ -15,7 +15,12 @@ class UserManager(BaseUserManager):
 
         user = self.model(
             email=self.normalize_email(email),
+            first_name = first_name,
+            last_name=last_name,
+            username=username,
+            type=type
         )
+
 
         user.set_password(password)
         user.save(using=self._db)
@@ -30,6 +35,7 @@ class UserManager(BaseUserManager):
             password=password,
         )
         user.staff = True
+        user.type = "staff"
         user.save(using=self._db)
         return user
 
@@ -44,6 +50,9 @@ class UserManager(BaseUserManager):
         )
         user.staff = True
         user.username = username
+        user.is_admin=True
+        user.is_superuser = True
+        user.type = "admin"
         user.admin = True
         user.save(using=self._db)
         return user
@@ -59,14 +68,12 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_admin = models.BooleanField(default=False)
     is_active = models.BooleanField(verbose_name='aktives Konto', default=True)
     is_superuser = models.BooleanField(default=False)
-    last_login = models.DateTimeField(verbose_name='letzte Anmeldung', auto_now=True)
-    date_joined = models.DateTimeField(verbose_name='Beitrittsdatum', auto_now_add=True)
     first_name = models.CharField(verbose_name='Vorname', max_length=55)
     last_name = models.CharField(verbose_name='Nachname', max_length=55)
 
     # additional
     password = models.CharField(verbose_name='Password', max_length=500)
-    profilepic = models.ImageField(verbose_name='Profilbild', upload_to='profilepics/', max_length=100, null=True,
+    profilepic = models.ImageField(verbose_name='Profilpic', upload_to='profilepics/', max_length=100, null=True,
                                    blank=True)
     type = models.CharField(max_length=20,choices=(('admin','Admin'),('student','Student'),('teacher','Teacher'),('staff','Staff')))
     school = models.CharField(max_length=200)
@@ -77,7 +84,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     USERNAME_FIELD = 'username'
     EMAIL_FIELD = 'email'
-    REQUIRED_FIELDS = ['email', 'password']
+    REQUIRED_FIELDS = ['password','email','first_name','last_name','type']
 
     def __str__(self):
         return self.username
