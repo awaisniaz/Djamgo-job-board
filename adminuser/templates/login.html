@@ -80,12 +80,11 @@ margin-top:60px;
 }
 </style>
 <div class="container-main">
-<form action="/action_page.php" style="border:1px solid #ccc">
+<form action="/admin_side/login_post/" method="POST">
+  {% csrf_token %}
   <div class="container">
     <h1>Login</h1>
-
     <hr>
-
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" required>
 
