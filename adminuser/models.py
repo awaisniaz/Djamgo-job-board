@@ -72,7 +72,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     password = models.CharField(verbose_name='Password', max_length=500)
     profilepic = models.ImageField(verbose_name='Profilpic', upload_to='profilepics/', max_length=100, null=True,
                                    blank=True)
-    type = models.CharField(max_length=20,choices=(('admin','Admin'),('student','Student'),('teacher','Teacher'),('staff','Staff')))
+    type = models.CharField(max_length=20,choices=(('admin','Admin'),('student','Student'),('teacher','Teacher'),('staff','Staff')),default='Teacher')
     school = models.CharField(max_length=200)
     section=models.CharField(max_length=20)
     subject = models.CharField(max_length=40)
