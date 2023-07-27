@@ -2,6 +2,9 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
       body {
         margin: 0;
@@ -78,7 +81,7 @@
       }
 
       .footer {
-        position: fixed;
+<!--        position: fixed;-->
         left: 0;
         bottom: 0;
         width: 100%;
@@ -97,24 +100,24 @@
     />
   </head>
   <body>
-    <div class="topnav">
-      <div class="left-section">
-        <a class="active" href="dashboard">DashBoard</a>
-        <a href="/teachers">Teachers</a>
-        <a href="/students">Students</a>
-        <a href="/admin-staff">Admin Staff</a>
-        <a href="/library-staff">Library Staff</a>
-        <a href="/manage-tools">Tools</a>
-      </div>
-      <div class="right-section">
-        <button>Login</button>
-        <button>Register</button>
-      </div>
-    </div>
+<!--    <div class="topnav">-->
+<!--      <div class="left-section">-->
+<!--        <a class="active" href="dashboard">DashBoard</a>-->
+<!--        <a href="/teachers">Teachers</a>-->
+<!--        <a href="/students">Students</a>-->
+<!--        <a href="/admin-staff">Admin Staff</a>-->
+<!--        <a href="/library-staff">Library Staff</a>-->
+<!--        <a href="/manage-tools">Tools</a>-->
+<!--      </div>-->
+<!--      <div class="right-section">-->
+<!--        <button>Login</button>-->
+<!--        <button>Register</button>-->
+<!--      </div>-->
+<!--    </div>-->
 
     {% block content %} {% endblock %}
-    <div class="footer">
-      <p>Copyright@2023</p>
-    </div>
+<!--    <div class="footer">-->
+<!--      <p>Copyright@2023</p>-->
+<!--    </div>-->
   </body>
 </html>

@@ -58,3 +58,8 @@ def registerandUpdate(request):
 
    else:
       return JsonResponse({"msg":"I am Patch Request"})
+
+
+
+def dashboard(request):
+   return render(request, 'Dashboard.html', {})
