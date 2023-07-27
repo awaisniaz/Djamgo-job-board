@@ -1,8 +1,8 @@
+{% extends "index.html" %} {% block content %}
 
-{% extends "index.html" %}
-{% block content %}
-
-<body class="bg-blue-50">
+<body
+  class="bg-blue-50 bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500"
+>
   <div class="flex h-screen">
     <!-- Sidebar -->
     <aside class="bg-blue-500 text-white w-56 p-4">
@@ -20,15 +20,25 @@
     <!-- Main Content -->
     <main class="flex-1 p-4">
       <!-- Top Navbar with Logo and User Info -->
-      <nav class="bg-white p-4 shadow-md mb-4 flex items-center justify-between">
+      <nav
+        class="bg-white p-4 shadow-md mb-4 flex items-center justify-between"
+      >
         <div class="flex items-center">
           <!-- Replace "https://via.placeholder.com/150" with the URL of your school logo -->
-          <img src="https://via.placeholder.com/150" alt="School Logo" class="w-12 h-12 mr-2">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="School Logo"
+            class="w-12 h-12 mr-2"
+          />
           <h2 class="text-2xl font-bold">Welcome to the Admin Dashboard</h2>
         </div>
         <div class="flex items-center space-x-4">
           <!-- User Avatar (Replace "https://via.placeholder.com/40" with the URL of the user's avatar) -->
-          <img src="https://via.placeholder.com/40" alt="User Avatar" class="w-8 h-8 rounded-full">
+          <img
+            src="https://via.placeholder.com/40"
+            alt="User Avatar"
+            class="w-8 h-8 rounded-full"
+          />
 
           <!-- User Login Name (Replace "John Doe" with the user's login name) -->
           <span class="text-gray-600 font-semibold">John Doe</span>
@@ -38,95 +48,127 @@
       <!-- Dashboard Cards -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
         <!-- Teacher Count Card -->
-        <div class="bg-yellow-300 p-4 shadow-md rounded-lg flex items-center justify-between transform transition-transform hover:scale-105">
+        <div
+          class="bg-yellow-300 p-4 shadow-md rounded-lg flex items-center justify-between transform transition-transform hover:scale-105"
+        >
           <div>
             <h3 class="text-lg font-bold mb-2">Teachers</h3>
             <p class="text-gray-500 text-sm mb-2">Total Teachers</p>
             <div class="flex items-center">
-              <p class="text-4xl font-bold">48</p> <!-- Dummy data -->
-              <i class="ml-2 fas fa-chalkboard-teacher text-3xl text-blue-500"></i> <!-- Font Awesome Icon -->
+              <p class="text-4xl font-bold">48</p>
+              <!-- Dummy data -->
+              <i
+                class="ml-2 fas fa-chalkboard-teacher text-3xl text-blue-500"
+              ></i>
+              <!-- Font Awesome Icon -->
             </div>
           </div>
         </div>
 
         <!-- Student Count Card -->
-        <div class="bg-green-300 p-4 shadow-md rounded-lg flex items-center justify-between transform transition-transform hover:scale-105">
+        <div
+          class="bg-green-300 p-4 shadow-md rounded-lg flex items-center justify-between transform transition-transform hover:scale-105"
+        >
           <div>
             <h3 class="text-lg font-bold mb-2">Students</h3>
             <p class="text-gray-500 text-sm mb-2">Total Students</p>
             <div class="flex items-center">
-              <p class="text-4xl font-bold">246</p> <!-- Dummy data -->
-              <i class="ml-2 fas fa-user-graduate text-3xl text-blue-500"></i> <!-- Font Awesome Icon -->
+              <p class="text-4xl font-bold">246</p>
+              <!-- Dummy data -->
+              <i class="ml-2 fas fa-user-graduate text-3xl text-blue-500"></i>
+              <!-- Font Awesome Icon -->
             </div>
           </div>
         </div>
 
         <!-- Management Staff Count Card -->
-        <div class="bg-red-300 p-4 shadow-md rounded-lg flex items-center justify-between transform transition-transform hover:scale-105">
+        <div
+          class="bg-red-300 p-4 shadow-md rounded-lg flex items-center justify-between transform transition-transform hover:scale-105"
+        >
           <div>
             <h3 class="text-lg font-bold mb-2">Management Staff</h3>
             <p class="text-gray-500 text-sm mb-2">Total Staff</p>
             <div class="flex items-center">
-              <p class="text-4xl font-bold">18</p> <!-- Dummy data -->
-              <i class="ml-2 fas fa-user-tie text-3xl text-blue-500"></i> <!-- Font Awesome Icon -->
+              <p class="text-4xl font-bold">18</p>
+              <!-- Dummy data -->
+              <i class="ml-2 fas fa-user-tie text-3xl text-blue-500"></i>
+              <!-- Font Awesome Icon -->
             </div>
           </div>
         </div>
       </div>
 
-       <div class="bg-white p-4 shadow-md rounded-lg mb-4">
+      <div class="bg-white p-4 shadow-md rounded-lg mb-4">
         <h3 class="text-lg font-bold mb-2">School Achievements</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           <!-- Achievement Card -->
-          <div class="bg-yellow-300 p-4 shadow-md rounded-lg flex items-center justify-between">
+          <div
+            class="bg-yellow-300 p-4 shadow-md rounded-lg flex items-center justify-between"
+          >
             <div>
               <h3 class="text-lg font-bold mb-2">Science Fair</h3>
               <p class="text-gray-500 text-sm mb-2">Total Awards</p>
               <div class="flex items-center">
-                <p class="text-4xl font-bold">10</p> <!-- Dummy data -->
-                <i class="ml-2 fas fa-trophy text-3xl text-blue-500"></i> <!-- Font Awesome Icon -->
+                <p class="text-4xl font-bold">10</p>
+                <!-- Dummy data -->
+                <i class="ml-2 fas fa-trophy text-3xl text-blue-500"></i>
+                <!-- Font Awesome Icon -->
               </div>
             </div>
           </div>
 
           <!-- Achievement Card -->
-          <div class="bg-green-300 p-4 shadow-md rounded-lg flex items-center justify-between">
+          <div
+            class="bg-green-300 p-4 shadow-md rounded-lg flex items-center justify-between"
+          >
             <div>
               <h3 class="text-lg font-bold mb-2">Math Olympiad</h3>
               <p class="text-gray-500 text-sm mb-2">Total Medals</p>
               <div class="flex items-center">
-                <p class="text-4xl font-bold">15</p> <!-- Dummy data -->
-                <i class="ml-2 fas fa-medal text-3xl text-blue-500"></i> <!-- Font Awesome Icon -->
+                <p class="text-4xl font-bold">15</p>
+                <!-- Dummy data -->
+                <i class="ml-2 fas fa-medal text-3xl text-blue-500"></i>
+                <!-- Font Awesome Icon -->
               </div>
             </div>
           </div>
 
           <!-- Achievement Card -->
-          <div class="bg-blue-300 p-4 shadow-md rounded-lg flex items-center justify-between">
+          <div
+            class="bg-blue-300 p-4 shadow-md rounded-lg flex items-center justify-between"
+          >
             <div>
               <h3 class="text-lg font-bold mb-2">Debate Competition</h3>
               <p class="text-gray-500 text-sm mb-2">Total Trophies</p>
               <div class="flex items-center">
-                <p class="text-4xl font-bold">7</p> <!-- Dummy data -->
-                <i class="ml-2 fas fa-globe-americas text-3xl text-blue-500"></i> <!-- Font Awesome Icon -->
+                <p class="text-4xl font-bold">7</p>
+                <!-- Dummy data -->
+                <i
+                  class="ml-2 fas fa-globe-americas text-3xl text-blue-500"
+                ></i>
+                <!-- Font Awesome Icon -->
               </div>
             </div>
           </div>
 
           <!-- Achievement Card -->
-          <div class="bg-red-300 p-4 shadow-md rounded-lg flex items-center justify-between">
+          <div
+            class="bg-red-300 p-4 shadow-md rounded-lg flex items-center justify-between"
+          >
             <div>
               <h3 class="text-lg font-bold mb-2">Sports Tournament</h3>
               <p class="text-gray-500 text-sm mb-2">Total Cups</p>
               <div class="flex items-center">
-                <p class="text-4xl font-bold">3</p> <!-- Dummy data -->
-                <i class="ml-2 fas fa-trophy-alt text-3xl text-blue-500"></i> <!-- Font Awesome Icon -->
+                <p class="text-4xl font-bold">3</p>
+                <!-- Dummy data -->
+                <i class="ml-2 fas fa-trophy-alt text-3xl text-blue-500"></i>
+                <!-- Font Awesome Icon -->
               </div>
             </div>
           </div>
         </div>
       </div>
-        <div class="bg-white p-4 shadow-md rounded-lg mb-4">
+      <div class="bg-white p-4 shadow-md rounded-lg mb-4">
         <h3 class="text-lg font-bold mb-4">High Performer Students</h3>
         <table class="w-full border">
           <thead>
@@ -180,80 +222,79 @@
       </div>
 
       <!-- Charts Section -->
-<!--      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">-->
-<!--        &lt;!&ndash; Line Chart &ndash;&gt;-->
+      <!--      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">-->
+      <!--        &lt;!&ndash; Line Chart &ndash;&gt;-->
 
+      <!--        &lt;!&ndash; Bar Chart &ndash;&gt;-->
+      <!--        <div class="bg-white p-4 shadow-md rounded-lg">-->
+      <!--          <h3 class="text-lg font-bold mb-2">Bar Chart</h3>-->
+      <!--          <canvas id="barChart" width="400" height="200"></canvas>-->
+      <!--        </div>-->
 
-<!--        &lt;!&ndash; Bar Chart &ndash;&gt;-->
-<!--        <div class="bg-white p-4 shadow-md rounded-lg">-->
-<!--          <h3 class="text-lg font-bold mb-2">Bar Chart</h3>-->
-<!--          <canvas id="barChart" width="400" height="200"></canvas>-->
-<!--        </div>-->
+      <!--        &lt;!&ndash; Pie Chart &ndash;&gt;-->
+      <!--        <div class="bg-white p-4 shadow-md rounded-lg">-->
+      <!--          <h3 class="text-lg font-bold mb-2">Pie Chart</h3>-->
+      <!--          <canvas id="pieChart" width="400" height="200"></canvas>-->
+      <!--        </div>-->
 
-<!--        &lt;!&ndash; Pie Chart &ndash;&gt;-->
-<!--        <div class="bg-white p-4 shadow-md rounded-lg">-->
-<!--          <h3 class="text-lg font-bold mb-2">Pie Chart</h3>-->
-<!--          <canvas id="pieChart" width="400" height="200"></canvas>-->
-<!--        </div>-->
+      <!--        &lt;!&ndash; Custom Chart (example, replace with your preferred chart library) &ndash;&gt;-->
 
-<!--        &lt;!&ndash; Custom Chart (example, replace with your preferred chart library) &ndash;&gt;-->
-
-<!--      </div>-->
+      <!--      </div>-->
     </main>
   </div>
 
-<!-- <script>-->
-<!--    // Dummy data for the bar chart-->
-<!--    const barChartData = {-->
-<!--      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],-->
-<!--      datasets: [{-->
-<!--        label: 'Sales',-->
-<!--        data: [20, 32, 18, 28, 40, 36, 52], // Dummy data-->
-<!--        backgroundColor: 'rgba(54, 162, 235, 0.2)',-->
-<!--        borderColor: 'rgba(54, 162, 235, 1)',-->
-<!--        borderWidth: 1,-->
-<!--      }]-->
-<!--    };-->
+  <!-- <script>-->
+  <!--    // Dummy data for the bar chart-->
+  <!--    const barChartData = {-->
+  <!--      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],-->
+  <!--      datasets: [{-->
+  <!--        label: 'Sales',-->
+  <!--        data: [20, 32, 18, 28, 40, 36, 52], // Dummy data-->
+  <!--        backgroundColor: 'rgba(54, 162, 235, 0.2)',-->
+  <!--        borderColor: 'rgba(54, 162, 235, 1)',-->
+  <!--        borderWidth: 1,-->
+  <!--      }]-->
+  <!--    };-->
 
-<!--    // Dummy data for the pie chart-->
-<!--    const pieChartData = {-->
-<!--      labels: ['Red', 'Blue', 'Yellow', 'Green'],-->
-<!--      datasets: [{-->
-<!--        data: [15, 25, 30, 10], // Dummy data-->
-<!--        backgroundColor: ['red', 'blue', 'yellow', 'green'],-->
-<!--        borderWidth: 0,-->
-<!--      }]-->
-<!--    };-->
+  <!--    // Dummy data for the pie chart-->
+  <!--    const pieChartData = {-->
+  <!--      labels: ['Red', 'Blue', 'Yellow', 'Green'],-->
+  <!--      datasets: [{-->
+  <!--        data: [15, 25, 30, 10], // Dummy data-->
+  <!--        backgroundColor: ['red', 'blue', 'yellow', 'green'],-->
+  <!--        borderWidth: 0,-->
+  <!--      }]-->
+  <!--    };-->
 
-<!--    // Create charts-->
-<!--    const barChartCtx = document.getElementById('barChart').getContext('2d');-->
-<!--    new Chart(barChartCtx, {-->
-<!--      type: 'bar',-->
-<!--      data: barChartData,-->
-<!--      options: {-->
-<!--        scales: {-->
-<!--          y: {-->
-<!--            beginAtZero: true-->
-<!--          }-->
-<!--        }-->
-<!--      }-->
-<!--    });-->
+  <!--    // Create charts-->
+  <!--    const barChartCtx = document.getElementById('barChart').getContext('2d');-->
+  <!--    new Chart(barChartCtx, {-->
+  <!--      type: 'bar',-->
+  <!--      data: barChartData,-->
+  <!--      options: {-->
+  <!--        scales: {-->
+  <!--          y: {-->
+  <!--            beginAtZero: true-->
+  <!--          }-->
+  <!--        }-->
+  <!--      }-->
+  <!--    });-->
 
-<!--    const pieChartCtx = document.getElementById('pieChart').getContext('2d');-->
-<!--    new Chart(pieChartCtx, {-->
-<!--      type: 'pie',-->
-<!--      data: pieChartData,-->
-<!--    });-->
+  <!--    const pieChartCtx = document.getElementById('pieChart').getContext('2d');-->
+  <!--    new Chart(pieChartCtx, {-->
+  <!--      type: 'pie',-->
+  <!--      data: pieChartData,-->
+  <!--    });-->
 
-<!--    // Add your custom chart logic here for the "Custom Chart" section-->
-<!--     const chartContainers = document.querySelectorAll('.bg-white');-->
+  <!--    // Add your custom chart logic here for the "Custom Chart" section-->
+  <!--     const chartContainers = document.querySelectorAll('.bg-white');-->
 
-<!--  chartContainers.forEach((container) => {-->
-<!--    container.style.fontSize = '14px'; // Adjust font size-->
-<!--    container.style.padding = '8px'; // Adjust padding-->
-<!--    container.style.minHeight = '200px'; // Adjust minimum height-->
-<!--  });-->
-<!--  </script>-->
+  <!--  chartContainers.forEach((container) => {-->
+  <!--    container.style.fontSize = '14px'; // Adjust font size-->
+  <!--    container.style.padding = '8px'; // Adjust padding-->
+  <!--    container.style.minHeight = '200px'; // Adjust minimum height-->
+  <!--  });-->
+  <!--  </script>-->
 </body>
 
 {% endblock %}
